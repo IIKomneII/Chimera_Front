@@ -4,29 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    
     <link rel="stylesheet" href="style.css">
-     <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-    <div id="separar_logo">
-        <img src="Imagens/Vector.png" alt="">
-        <img id="logo" src="Imagens/ChatGPT Image 8 de abr. de 2025, 13_13_27 1.png" alt="">
-    </div>
-        <h5>Home</h5>
-        <h5>Filmes</h5>
-        <h5>Series</h5>
-            <div id="cant_superior">
-        <img src="Imagens/bell-svgrepo-com 1.png" alt="">
-        <img src="Imagens/magnifying-glass-11-svgrepo-com 1.png" alt="">
-        <img src="Imagens/image 8.png" alt="">
-             </div>
+        <div id="separar_logo">
+            <span class="header_icon" id="menu-toggle">
+                <img src="Imagens/Vector.png" alt="">
+            </span>
+            <img id="logo" src="Imagens/ChatGPT Image 8 de abr. de 2025, 13_13_27 1.png" alt="">
+        </div>
+        <span class="header_icon"><h5>Home</h5></span>
+        <span class="header_icon"><h5>Filmes</h5></span>
+        <span class="header_icon"><h5>Series</h5></span>
+        <div id="cant_superior">
+            <span class="header_icon"><img src="Imagens/bell-svgrepo-com 1.png" alt=""></span>
+            <span class="header_icon"><img src="Imagens/magnifying-glass-11-svgrepo-com 1.png" alt=""></span>
+            <span class="header_icon"><img src="Imagens/image 8.png" alt=""></span>
+        </div>
     </header>
-
-
+    <!-- Barra lateral -->
+    <nav id="sidebar">
+        <button id="close-sidebar">&times;</button>
+        <ul>
+            <span class="header_icon"><li><img src="imagens/image.png" alt="" height=""></li></span>
+            <span class="header_icon"><li><img src="imagens/image 3.png" alt=""></li></span>
+            <span class="header_icon"><li><img src="imagens/image 5.png" alt=""></li></span>
+            <span class="header_icon"><li><img src="imagens/image 6.png" alt=""></li></span>
+        </ul>
+    </nav>
+    <main>
+        <!-- ...conteúdo... -->
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const sidebar = document.getElementById('sidebar');
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeSidebar = document.getElementById('close-sidebar');
+        menuToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          sidebar.classList.add('active');
+        });
+        closeSidebar.addEventListener('click', () => {
+          sidebar.classList.remove('active');
+        });
+        // Fecha ao clicar fora
+        document.addEventListener('click', function(e) {
+          if (sidebar.classList.contains('active') && !sidebar.contains(e.target) && e.target !== menuToggle) {
+            sidebar.classList.remove('active');
+          }
+        });
+      });
+    </script>
 </body>
 </html>
