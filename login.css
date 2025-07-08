@@ -4,10 +4,68 @@
     padding: 0;
 }
 
+h5{
+  font-size: 1.7em;
+}
+
 body {
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.986);
     color: #fff;
     font-family: "Inknut Antiqua", serif;
+
+}
+
+/*Login*/
+
+
+header {
+    height: 5.6em;
+    background-color: #121116;
+    display: flex;
+    align-items: center;
+    justify-content: center;        
+    gap: 6.4em;
+    padding: 3em;               
+}
+
+#separar_logo {
+    display: flex;
+    align-items: center; 
+    gap: 40px;
+    
+}
+
+#cant_superior{
+   position: relative;
+  display: flex;
+  gap: 80px;
+}
+
+#logo {
+    height: 4em; 
+}
+
+#filSer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_icon:hover {
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.header_icon:active {
+    transition: 0.2;
+    opacity: 1;
+    box-shadow: 0 0 16px 4px #fff, 0 0 32px 8px #3D85FF;
+    background: #444;
+    transition: 0.2s;
+}
+
+header img{
+  height: 3em;
 }
 
 /*Login*/
@@ -24,7 +82,6 @@ body {
     width: 70%;
     height: 85vh;
     border-radius: 28px;
-    border: solid 2px rgba(61, 133, 255, 0.56);
     text-align: center;
 }
 
@@ -37,7 +94,7 @@ body {
 }
 
 .inboxuser{
-    margin: 60px;
+    margin: 3em;
 }
 
 .inboxuser p{
@@ -56,7 +113,7 @@ body {
 }
 
 .p{
-    margin-top: 5px;
+    margin-top: 1.5em;
     color: rgba(61, 133, 255, 1);
 }
 
@@ -69,10 +126,10 @@ input:focus{
 }
 
 #bt{
-    color: #ffffff;
+ color: #ffffff;
     font-size: 16px;
     font-weight: 500;
-    background-color: rgba(61, 133, 255, 0.9);
+    background-color: rgba(29, 145, 199, 0.63);
     width: 15%;
     height: 5vh;
     border-radius: 10px;
@@ -89,7 +146,7 @@ input:focus{
 }
 
 #btn::after{
-    position: absolute;
+      position: absolute;
     left: 0;
     bottom: -1px;
     right: 0;
