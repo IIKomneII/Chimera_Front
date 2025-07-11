@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;    
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h5{
@@ -9,55 +9,53 @@ h5{
 }
 
 body {
-    background-color: #121116;
-    color: #fff;
-    font-family: "Inknut Antiqua", serif;
+  background-color: #121116;
+  color: #fff;
+  font-family: "Inknut Antiqua", serif;
 }
 
 header {
-    height: 5.6em;
-    background-color: #121116;
-    display: flex;
-    align-items: center;
-    justify-content: center;        
-    gap: 6.4em;
-    padding: 3em;               
+  height: 5.6em;
+  background-color: #121116;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.4em;
+  padding: 3em;
 }
 
 #separar_logo {
-    display: flex;
-    align-items: center; 
-    gap: 40px;
-    
+  display: flex;
+  align-items: center; 
+  gap: 40px;
+
 }
 
 #cant_superior{
-   position: relative;
+  position: relative;
   display: flex;
   gap: 80px;
 }
 
 #logo {
-    height: 4em; 
+  height: 4em; 
 }
 
 #filSer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header_icon:hover {
-    opacity: 0.7;
-    transition: 0.2s;
+  opacity: 0.7;
+  transition: 0.2s;
 }
 
 .header_icon:active {
-    transition: 0.2;
-    opacity: 1;
-    box-shadow: 0 0 16px 4px #fff, 0 0 32px 8px #3D85FF;
-    background: #444;
-    transition: 0.2s;
+  transition: 0.2;
+  opacity: 1;
+  transition: 0.2s;
 }
 
 header img{
@@ -82,7 +80,7 @@ header img{
 }
 
 #sidebar ul li img{
-    height: 6em; 
+  height: 6em; 
 }
 
 #sidebar.active {
@@ -117,4 +115,72 @@ header img{
 
 #sidebar ul li a:hover {
   color: #3D85FF;
+}
+
+.carousel-container {
+    width: 600px; /* Largura do carrossel */
+    overflow: hidden; /* Esconde o que está fora do conteiner */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.carousel-slide {
+    display: flex; /* Faz com que as imagens fiquem lado a lado */
+    transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave ao mover */
+}
+
+.carousel-slide img {
+    width: 100%;
+    flex-shrink: 0; /* Impede que as imagens encolham */
+    display: block;
+    border-radius: 8px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%; /* Botões redondos */
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333; /* Cor do dot ativo */
 }
